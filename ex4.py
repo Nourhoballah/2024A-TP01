@@ -5,19 +5,10 @@
 
 battery_level = int(input('Pourcentage de batterie ?'))
 
-if battery_level > 100 or battery_level < 0:
-    print("Le pourcentage de la batterie doit être compris entre 0 et 100.")
+if battery_level > 100 or battery_level <= 0:
+    print("Pourcentage de batterie ?")
 else:
-    if battery_level >= 50:
-        distance = battery_level * 2
-    elif battery_level >= 25:
-        distance = battery_level * 1.5
-    elif battery_level >= 10:
-        distance = battery_level * 1.2
-    elif battery_level >= 5:
-        distance = battery_level * 0.8
-    else:
-        distance = battery_level * 0.5
+    distance = 0
 
     print(f"{distance} km.")
           
