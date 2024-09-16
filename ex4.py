@@ -3,10 +3,10 @@
 #        et affiche le résultat au format "XX km".
 #        Assurez une gestion du pourcentage valide au cours de votre programme (% toujours dans [0 ; 100]).
 
-battery_level = float(input("Quel est le pourcentage de batterie du bateau ? "))
+battery_level = float(input("Pourcentage de batterie ?"))
 
 if battery_level > 100 or battery_level <= 0:
-    print("Pourcentage de batterie ?")
+    print(" La batterie est vide")
 else:
     distance = 0
 
@@ -28,4 +28,4 @@ else:
 
     distance += battery_level * 6
 
-    print(f"La distance possible est de {round(distance)} km.")
+    print(f" {distance} km")
