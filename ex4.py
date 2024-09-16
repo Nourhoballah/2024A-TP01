@@ -3,8 +3,6 @@
 #        et affiche le résultat au format "XX km".
 #        Assurez une gestion du pourcentage valide au cours de votre programme (% toujours dans [0 ; 100]).
 
-
-
 battery_level = float(input("Quel est le pourcentage de batterie du bateau ? "))
 
 if battery_level > 100 or battery_level <= 0:
