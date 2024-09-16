@@ -2,70 +2,70 @@ import unittest
 
 from module_runner import ModuleRunner
 
-# class TestExercice1(unittest.TestCase): 
-#     def setUp(self) -> None:
-#         self.maxDiff = None
-#         self.runner = ModuleRunner('ex1')
-#         self.input_questions = "De quelle nationalité est l'athlète ? Quel est son nom ? Date du record ? Dans quelle discipline ? Dans une catégorie spécifique ? Quel est le record ? "
-#         return super().setUp()
-    
-#     def format_tests(self, country: str, athlete: str, date: str, sport: str, category: str, record: str):
-#         simulated_inputs = f"{country}\n{athlete}\n{date}\n{sport}\n{category}\n{record}\n"
-#         output = self.runner.run(simulated_inputs)
-#         expected = f"{self.input_questions}\nNouveau Record:\n--------------------\n{date} - {sport} - {category}:\n\t{athlete} ({country}) - {record}\n"
-#         self.assertEqual(output, expected)
-
-#     def test_exercice1_swimmer(self):
-#         country = "CAN"
-#         athlete = "Summer McIntosh"
-#         date = "1/8/2024"
-#         sport = "Natation"
-#         category = "200M Papillon"
-#         record = "2:3.03"
-#         self.format_tests(country, athlete, date, sport, category, record)
-
-#     def test_exercice1_pole_vault(self):
-#         country = "SW"
-#         athlete = "Armand Duplantis"
-#         date = "25/8/2024"
-#         sport = "Athlétisme"
-#         category = "Saut à la perche"
-#         record = "6.25m"
-#         self.format_tests(country, athlete, date, sport, category, record)
-
-class TestExercice2(unittest.TestCase):
+class TestExercice1(unittest.TestCase): 
     def setUp(self) -> None:
         self.maxDiff = None
-        self.runner = ModuleRunner('ex2')
-        self.input_questions = "Quelle quantité d'eau faut-il assainir ? "
+        self.runner = ModuleRunner('ex1')
+        self.input_questions = "De quelle nationalité est l'athlète ? Quel est son nom ? Date du record ? Dans quelle discipline ? Dans une catégorie spécifique ? Quel est le record ? "
         return super().setUp()
-
-    def format_tests(self, water_quantity: float, n_filter: int, n_light: int, kg_chlorine: float):
-        simulated_inputs = f"{water_quantity}\n"
+    
+    def format_tests(self, country: str, athlete: str, date: str, sport: str, category: str, record: str):
+        simulated_inputs = f"{country}\n{athlete}\n{date}\n{sport}\n{category}\n{record}\n"
         output = self.runner.run(simulated_inputs)
-        expected = f"""{self.input_questions}Voici les éléments requis pour assainir {water_quantity}L d'eau:
-        
-\t- Filtre(s) : {n_filter}
-\t- Lampe(s) UV : {n_light}
-\t- Chlore : {kg_chlorine}kg\n"""
-        
+        expected = f"{self.input_questions}\nNouveau Record:\n--------------------\n{date} - {sport} - {category}:\n\t{athlete} ({country}) - {record}\n"
         self.assertEqual(output, expected)
 
-    def test_standard_water(self):
-        water_quantity = 5.0
-        expected_filter = 1
-        expected_light = 3
-        expected_chlorine = 0.5
-        self.format_tests(water_quantity, expected_filter, expected_light, expected_chlorine)
+    def test_exercice1_swimmer(self):
+        country = "CAN"
+        athlete = "Summer McIntosh"
+        date = "1/8/2024"
+        sport = "Natation"
+        category = "200M Papillon"
+        record = "2:3.03"
+        self.format_tests(country, athlete, date, sport, category, record)
+
+    def test_exercice1_pole_vault(self):
+        country = "SW"
+        athlete = "Armand Duplantis"
+        date = "25/8/2024"
+        sport = "Athlétisme"
+        category = "Saut à la perche"
+        record = "6.25m"
+        self.format_tests(country, athlete, date, sport, category, record)
+
+# class TestExercice2(unittest.TestCase):
+#     def setUp(self) -> None:
+#         self.maxDiff = None
+#         self.runner = ModuleRunner('ex2')
+#         self.input_questions = "Quelle quantité d'eau faut-il assainir ? "
+#         return super().setUp()
+
+#     def format_tests(self, water_quantity: float, n_filter: int, n_light: int, kg_chlorine: float):
+#         simulated_inputs = f"{water_quantity}\n"
+#         output = self.runner.run(simulated_inputs)
+#         expected = f"""{self.input_questions}Voici les éléments requis pour assainir {water_quantity}L d'eau:
+        
+# \t- Filtre(s) : {n_filter}
+# \t- Lampe(s) UV : {n_light}
+# \t- Chlore : {kg_chlorine}kg\n"""
+        
+#         self.assertEqual(output, expected)
+
+#     def test_standard_water(self):
+#         water_quantity = 5.0
+#         expected_filter = 1
+#         expected_light = 3
+#         expected_chlorine = 0.5
+#         self.format_tests(water_quantity, expected_filter, expected_light, expected_chlorine)
         
  
 
-    def test_standard_water_float(self):
-        water_quantity = 35.0
-        expected_filter = 7
-        expected_light = 21
-        expected_chlorine = 3.5
-        self.format_tests(water_quantity, expected_filter, expected_light, expected_chlorine)
+#     def test_standard_water_float(self):
+#         water_quantity = 35.0
+#         expected_filter = 7
+#         expected_light = 21
+#         expected_chlorine = 3.5
+#         self.format_tests(water_quantity, expected_filter, expected_light, expected_chlorine)
 
 # class TestExercice3(unittest.TestCase): 
 #     def setUp(self) -> None: 

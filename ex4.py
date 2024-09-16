@@ -3,7 +3,7 @@
 #        et affiche le résultat au format "XX km".
 #        Assurez une gestion du pourcentage valide au cours de votre programme (% toujours dans [0 ; 100]).
 
-battery_level = int(input("Quelle est le Pourcentage de la batterie : "))
+battery_level = int(input('Pourcentage de batterie ?'))
 
 if battery_level > 100 or battery_level < 0:
     print("Le pourcentage de la batterie doit être compris entre 0 et 100.")
@@ -19,5 +19,5 @@ else:
     else:
         distance = battery_level * 0.5
 
-    print(f"L'autonomie estimée est de {distance} Km.")
+    print(f"{distance} km.")
           
